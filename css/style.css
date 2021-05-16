@@ -295,14 +295,14 @@ h2 {
 }
 .register__wrapper::before {
   position: absolute;
-  content: url(../images/icons/grape.jpg);
+  content: url(images/icons/grape.jpg);
   top: -65px;
   left: -35px;
   z-index: 1;
 }
 .register__wrapper::after {
   position: absolute;
-  content: url(../images/icons/barrel.jpg);
+  content: url(images/icons/barrel.jpg);
   top: -65px;
   right: -65px;
   z-index: 1;

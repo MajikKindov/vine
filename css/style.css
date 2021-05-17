@@ -273,8 +273,10 @@ h2 {
   grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   grid-gap: 30px;
 }
+.new__pic {
+  width: 100%;
+}
 .new__pic:first-child {
-  width:100%;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;

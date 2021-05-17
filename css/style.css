@@ -274,6 +274,7 @@ h2 {
   grid-gap: 30px;
 }
 .new__pic:first-child {
+  width:100%;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;

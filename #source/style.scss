@@ -71,20 +71,22 @@ h2 {
 }
 .top {
     min-height: 100vh;
-    height: 900px;
-    background: url(https://majikkindov.github.io/vine/images/bgc.jpg) no-repeat;
+    background: url(../images/bgc.jpg) no-repeat;
+    background-size: auto auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     &__btns {
-        margin-top: 700px;
+        margin-top: 300px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     &__btn {
         margin-right: 30px;
-        margin-bottom: 700px;
+
     }
 }
 
@@ -93,8 +95,8 @@ h2 {
     background: #282828;
     color: white;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 11%;
+    padding-bottom: 11%;
 
     &__content {
         position: relative;
@@ -130,8 +132,6 @@ h2 {
     &__pic {
         margin-bottom: 60px;
     }
-
-}
 
 .new {
      background:  #E6E3C4;
@@ -220,6 +220,7 @@ h2 {
     }
 
     &__pic {
+        width: 100%;
         &:first-child {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -262,7 +263,7 @@ h2 {
 
     &__title {
         position: absolute;
-        left: 310px;
+        left: 26%;
         top: -20px;
         z-index: 1;
         background: #282828;
@@ -293,6 +294,7 @@ h2 {
     }
 
     &__input {
+        max-width: 100%;
         padding-bottom: 10px;
         color: white;
         border-bottom: 1px solid white;
@@ -300,7 +302,7 @@ h2 {
         &::placeholder {
             color: rgba(255, 255, 255, 0.507);
         }
-        &:nth-child(3) {
+        &:last-child {
             grid-column-start: 1;
             grid-column-end: 3;
         }
@@ -313,7 +315,7 @@ h2 {
         letter-spacing: 0.05em;
         text-transform: uppercase;
         background: #282828;
-        padding: 15px 209px;
+        padding: 15px 15%;
         border: 1px solid white;
         color: white;
         &:hover, :focus {

@@ -245,20 +245,20 @@ h2 {
         z-index: 0;
 
 
-        &::before {
-            position: absolute;
-            content: url(images/icons/grape.jpg);
-            top: -65px;
-            left: -35px;
-            z-index: 1;
-        }
-        &::after {
-            position: absolute;
-            content: url(images/icons/barrel.jpg);
-            top: -65px;
-            right: -65px;
-            z-index: 1;
-        }
+        // &::before {
+        //     position: absolute;
+        //     content: url(images/icons/grape.jpg);
+        //     top: -65px;
+        //     left: -35px;
+        //     z-index: 1;
+        // }
+        // &::after {
+        //     position: absolute;
+        //     content: url(images/icons/barrel.jpg);
+        //     top: -65px;
+        //     right: -65px;
+        //     z-index: 1;
+        // }
     }
 
     &__title {

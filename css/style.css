@@ -298,16 +298,22 @@ h2 {
   border: 1px solid white;
   z-index: 0;
 }
-.register__wrapper::before {
+@media (max-width: 1350px) {
+  .register__wrapper {
+    padding: 50px;
+  }
+}
+.register__grape {
   position: absolute;
-  content: url(images/icons/grape.jpg);
   top: -65px;
   left: -35px;
   z-index: 1;
 }
-.register__wrapper::after {
+.register__img {
+  max-width: 100%;
+}
+.register__barrel {
   position: absolute;
-  content: url(images/icons/barrel.jpg);
   top: -65px;
   right: -65px;
   z-index: 1;
@@ -336,6 +342,7 @@ h2 {
   top: -40px;
 }
 .register__inputs {
+  max-width: 100%;
   display: grid;
   grid-gap: 30px;
   grid-template: repeat(2, 1fr)/repeat(2, 1fr);

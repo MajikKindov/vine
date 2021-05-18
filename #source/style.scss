@@ -235,7 +235,6 @@ h2 {
     padding: 130px 0 100px 0;
     position: relative;
 
-
     &__wrapper {
         padding: 105px 285px;
         position: relative;
@@ -243,22 +242,29 @@ h2 {
         color:white;
         border: 1px solid white;
         z-index: 0;
+        @media (max-width: 1350px) {
+            padding: 50px;
+        }
+    }
 
 
-        // &::before {
-        //     position: absolute;
-        //     content: url(images/icons/grape.jpg);
-        //     top: -65px;
-        //     left: -35px;
-        //     z-index: 1;
-        // }
-        // &::after {
-        //     position: absolute;
-        //     content: url(images/icons/barrel.jpg);
-        //     top: -65px;
-        //     right: -65px;
-        //     z-index: 1;
-        // }
+
+    &__grape {
+        position: absolute;
+        top: -65px;
+        left: -35px;
+        z-index: 1;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__barrel {
+            position: absolute;
+            top: -65px;
+            right: -65px;
+            z-index: 1;
     }
 
     &__title {
@@ -287,6 +293,7 @@ h2 {
     }
 
     &__inputs {
+        max-width: 100%;
         display: grid;
         grid-gap: 30px;
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);

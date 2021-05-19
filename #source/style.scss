@@ -6,11 +6,24 @@
 .content {
     user-select: none;
     font-family: Montserrat;
+
 }
 .wrapper {
     max-width: 1110px;
     margin: 0 auto;
     position: relative;
+    @media(max-width:1200px) {
+        max-width: 800px;
+    }
+    @media(max-width:1080px) {
+        max-width: 970px;
+    }
+    @media(max-width:986px) {
+        max-width: 769px;
+    }
+    @media(max-width:780px) {
+        max-width: 639px;
+    }
 }
 
 h2 {
@@ -40,9 +53,10 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    max-width: 100%;
     margin-top: 30px;
     color: rgb(255, 255, 255);
+
 
     &__contacts {
         display: flex;
@@ -54,11 +68,18 @@ h2 {
 
 }
 .menu {
-    max-width: 100%;
+    width: 100%;
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-around;
+
+
+    &__ul {
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
+    }
 
     &__link {
         display: block;
@@ -66,18 +87,21 @@ h2 {
         &+& {
             border-left: 1px solid white;
         }
-    }
+        @media (max-width: 1110px) {
+            padding: 15px 50px;;
+        }
 
+    }
 }
 .top {
-    min-height: 100vh;
+    min-height: 900px;
     background: url(../images/bgc.jpg) no-repeat;
     background-size: auto auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     &__btns {
-        margin-top: 300px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -86,7 +110,6 @@ h2 {
 
     &__btn {
         margin-right: 30px;
-
     }
 }
 
@@ -122,21 +145,22 @@ h2 {
 
     &__text {
         font-family: Montserrat;
-        display: block;
+
         font-size: 16px;
         line-height: 150%;
         margin: 40px 190px 50px ;
-        min-width: 733px;
+        max-width: 733px;
     }
 
     &__pic {
         margin-bottom: 60px;
     }
     }
+
 .new {
      background:  #E6E3C4;
-     padding-top: 140px;
-     padding-bottom: 140px;
+     background-size: auto auto;
+     padding: 140px 0;
 
      &__wrapper {
          display: flex;
@@ -161,7 +185,6 @@ h2 {
      }
 
 
-
     &__subtitle {
         font-size: 16px;
         margin-bottom: 30px;
@@ -180,8 +203,8 @@ h2 {
         }
     }
     &__text {
-        margin-right: 125px;
-        margin-bottom: 30px;
+        max-width: 445px;
+        margin-bottom: 45px;
         line-height: 150%;
     }
 
@@ -232,7 +255,7 @@ h2 {
 
 .register {
     background: #282828;
-    padding: 130px 0 100px 0;
+    padding: 13% 0 10% 0;
     position: relative;
 
     &__wrapper {
@@ -242,9 +265,7 @@ h2 {
         color:white;
         border: 1px solid white;
         z-index: 0;
-        @media (max-width: 1350px) {
-            padding: 50px;
-        }
+
     }
 
 
@@ -258,12 +279,21 @@ h2 {
 
     &__img {
         max-width: 100%;
+        @media (max-width: 1260px) {
+            max-width: 75%;
+        }
+        @media (max-width: 1066px) {
+            max-width: 50%;
+        }
+        @media (max-width: 680px) {
+            max-width: 30%;
+        }
     }
 
     &__barrel {
             position: absolute;
             top: -65px;
-            right: -65px;
+            right: -75px;
             z-index: 1;
     }
 
@@ -274,6 +304,10 @@ h2 {
         z-index: 1;
         background: #282828;
         padding: 0 50px;
+        @media (max-width: 1200px) {
+            padding: 0 20px;
+            font-size: 24px;
+        }
     }
 
     &__text {
@@ -282,6 +316,7 @@ h2 {
         text-align: center;
         margin-bottom: 80px;
         position: relative;
+
                 &::after {
             position: absolute;
             content: '';
@@ -298,6 +333,9 @@ h2 {
         grid-gap: 30px;
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         margin-bottom: 50px;
+        @media(max-width:782px) {
+            grid-template: 1fr / 1fr;
+        }
     }
 
     &__input {
@@ -312,6 +350,9 @@ h2 {
         &:last-child {
             grid-column-start: 1;
             grid-column-end: 3;
+            @media(max-width:782px) {
+                grid-column-end: 2;
+            }
         }
     }
 

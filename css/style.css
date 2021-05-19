@@ -89,6 +89,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 800px;
+  }
+}
+@media (max-width: 1080px) {
+  .wrapper {
+    max-width: 970px;
+  }
+}
+@media (max-width: 986px) {
+  .wrapper {
+    max-width: 769px;
+  }
+}
+@media (max-width: 780px) {
+  .wrapper {
+    max-width: 639px;
+  }
+}
 
 h2 {
   font-family: "Playfair Display";
@@ -117,7 +137,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   margin-top: 30px;
   color: white;
 }
@@ -130,11 +150,18 @@ h2 {
 }
 
 .menu {
-  max-width: 100%;
+  width: 100%;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+}
+.menu__ul {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 960px) {
+  .menu__ul {
+    flex-direction: column;
+  }
 }
 .menu__link {
   display: block;
@@ -143,17 +170,22 @@ h2 {
 .menu__link + .menu__link {
   border-left: 1px solid white;
 }
+@media (max-width: 1110px) {
+  .menu__link {
+    padding: 15px 50px;
+  }
+}
 
 .top {
-  min-height: 100vh;
+  min-height: 900px;
   background: url(../images/bgc.jpg) no-repeat;
   background-size: auto auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .top__btns {
-  margin-top: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -193,11 +225,10 @@ h2 {
 }
 .taste__text {
   font-family: Montserrat;
-  display: block;
   font-size: 16px;
   line-height: 150%;
   margin: 40px 190px 50px;
-  min-width: 733px;
+  max-width: 733px;
 }
 .taste__pic {
   margin-bottom: 60px;
@@ -205,8 +236,8 @@ h2 {
 
 .new {
   background: #E6E3C4;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  background-size: auto auto;
+  padding: 140px 0;
 }
 .new__wrapper {
   display: flex;
@@ -246,8 +277,8 @@ h2 {
   bottom: -30px;
 }
 .new__text {
-  margin-right: 125px;
-  margin-bottom: 30px;
+  max-width: 445px;
+  margin-bottom: 45px;
   line-height: 150%;
 }
 .new__year {
@@ -287,7 +318,7 @@ h2 {
 
 .register {
   background: #282828;
-  padding: 130px 0 100px 0;
+  padding: 13% 0 10% 0;
   position: relative;
 }
 .register__wrapper {
@@ -298,11 +329,6 @@ h2 {
   border: 1px solid white;
   z-index: 0;
 }
-@media (max-width: 1350px) {
-  .register__wrapper {
-    padding: 50px;
-  }
-}
 .register__grape {
   position: absolute;
   top: -65px;
@@ -312,10 +338,25 @@ h2 {
 .register__img {
   max-width: 100%;
 }
+@media (max-width: 1260px) {
+  .register__img {
+    max-width: 75%;
+  }
+}
+@media (max-width: 1066px) {
+  .register__img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 680px) {
+  .register__img {
+    max-width: 30%;
+  }
+}
 .register__barrel {
   position: absolute;
   top: -65px;
-  right: -65px;
+  right: -75px;
   z-index: 1;
 }
 .register__title {
@@ -325,6 +366,12 @@ h2 {
   z-index: 1;
   background: #282828;
   padding: 0 50px;
+}
+@media (max-width: 1200px) {
+  .register__title {
+    padding: 0 20px;
+    font-size: 24px;
+  }
 }
 .register__text {
   font-size: 16px;
@@ -348,6 +395,11 @@ h2 {
   grid-template: repeat(2, 1fr)/repeat(2, 1fr);
   margin-bottom: 50px;
 }
+@media (max-width: 782px) {
+  .register__inputs {
+    grid-template: 1fr/1fr;
+  }
+}
 .register__input {
   max-width: 100%;
   padding-bottom: 10px;
@@ -361,6 +413,11 @@ h2 {
 .register__input:last-child {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+@media (max-width: 782px) {
+  .register__input:last-child {
+    grid-column-end: 2;
+  }
 }
 .register__btn {
   font-weight: 500;
